@@ -1,12 +1,12 @@
 <# batch file posh loader
 @cls
 @powershell.exe -command "iex ([System.IO.File]::ReadAllText('%0'))"
-@pause
+:: @pause
 @goto :EOF
 #>
 
-$pandoc = "C:\Users\yuliyl.EA\AppData\Local\Pandoc\pandoc.exe" # переменная для полного пути к pandoc, требуется, если путь к нему не находится в Env:Path
-$7z = "C:\Program Files (x86)\7-Zip\7z.exe"
+$pandoc = ""C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe" # переменная для полного пути к pandoc, требуется, если путь к нему не находится в Env:Path
+$7z = "C:/Program Files (x86)/7-Zip/7z.exe"
 
 if(test-path("./export/html/")) { $null = remove-item "./export/html/" -force -recurse }
 $null = new-item "./export/html/" -type directory -force
@@ -34,7 +34,12 @@ $content | Out-File "./export/hpmor_ru.html"
 
 "Конвертируем в FB2..."
 &$pandoc --from=markdown --smart --output=export/hpmor_ru.fb2 "./export/hpmor_ru.md"
-&$7z a -tzip -mx9 "./export/hpmor_ru.fb2.zip" "./export/hpmor_ru.fb2" # делаем архив
+"  * Архивируем FB2..."
+if(test-path($7z)) {
+   &$7z a -tzip -mx9 "./export/hpmor_ru.fb2.zip" "./export/hpmor_ru.fb2" 
+} else {
+   zip -9 -m -D -j "./export/hpmor_ru.fb2.zip" "./export/hpmor_ru.fb2"
+}
 "Конвертируем в DOCX..."
 &$pandoc --from=markdown --smart --output=export/hpmor_ru.docx "./export/hpmor_ru.md"
 "Конвертируем в MOBI..."

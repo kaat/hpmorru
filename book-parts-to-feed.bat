@@ -33,6 +33,15 @@ $feed = "<book>`n"
 
 dir './parts' -filter "*.md" |
 # where { $_.FullName.contains("86") } | # debug filter
+sort {
+   $rr = $code_regex.Match($_.Name)
+   if($rr.Success) {
+      [int]$rr.Groups[1].Value
+   }
+   else {
+      -1 # все кривые коды будут вверху
+   }
+} |
 % {
    write-host "$($_.Name)..."
    $ci = Get-ChapterInfo $_.FullName
