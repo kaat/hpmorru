@@ -13,7 +13,7 @@ dir "./parts" | sort { $_.FullName } |
 foreach {
 	$_.Name
 	$content = get-content $_.FullName
-	$content >> "./export/hpmor_ru.md"
+	add-content -value $content -path "./export/hpmor_ru.md" -encoding "UTF8"
 }
 
 "Joined!"

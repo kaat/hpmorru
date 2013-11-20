@@ -31,10 +31,14 @@ $feed_file = new-item './export/hpmor-feed.xml' -type file -force
 
 $feed = "<book>`n"
 
-dir './parts' -filter "*.md" | # where { $_.FullName.contains("86") } |
+dir './parts' -filter "*.md" |
+# where { $_.FullName.contains("86") } | # debug filter
 % {
    write-host "$($_.Name)..."
    $ci = Get-ChapterInfo $_.FullName
+
+   if(($ci.code -le 0) -or ($ci.code -ge 2000)) { "  * skipping!"; return } # вступления и заключения в feed попадать не должны
+
    $feed += "  <chapter>`n"
    $feed += "    <code>book/1/$($ci.code)</code>`n"
    $feed += "    <title>$($ci.title)</title>`n"
