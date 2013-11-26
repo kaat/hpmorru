@@ -5,7 +5,12 @@
 @goto :EOF
 #>
 
-$pandoc = ""C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe" # переменная для полного пути к pandoc, требуется, если путь к нему не находится в Env:Path
+if(test-path("C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe")) {
+   $pandoc = "C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe"
+} else {
+   $pandoc = "pandoc.exe"
+}
+
 $7z = "C:/Program Files (x86)/7-Zip/7z.exe"
 $css = "./images/markdown.css"
 
