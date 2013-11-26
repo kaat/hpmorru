@@ -9,7 +9,7 @@ $code_regex = new-object Regex "^(\d+)\s+.*$"
 $log = new-item "./book-parts-check.txt" -type file -force
 $codes = @{}
 
-"[Отсутствуют заголовки глав]" >> $log
+"[Список документов, у которых отсутствуют заголовки глав]" >> $log
 dir './parts' -filter "*.md" |
 # where { $_.FullName.contains("86") } | # debug filter
 sort {
@@ -33,9 +33,9 @@ sort {
    }
 }
 
-"[Повторяются коды документа]" >> $log
+"[Список документов с повторяющимися кодами]" >> $log
 $codes.GetEnumerator() |
 where { $_.Value -gt 1 } |
 % { "  $($_.Name) - $($_.Value) шт." } >> $log
 
-invoke-item $log
+# invoke-item $log

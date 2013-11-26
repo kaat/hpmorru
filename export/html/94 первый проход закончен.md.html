@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="russian" xml:lang="russian">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link href="data:text/css,html%20%7B%20font%2Dsize%3A%20100%25%3B%20overflow%2Dy%3A%20scroll%3B%20%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%7D%0A%0Abody%7B%0A%20%20color%3A%23444%3B%0A%20%20font%2Dfamily%3AGeorgia%2C%20Palatino%2C%20%27Palatino%20Linotype%27%2C%20Times%2C%20%27Times%20New%20Roman%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Hiragino%20Sans%20GB%22%2C%20%22STXihei%22%2C%20%22%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91%22%2C%20serif%3B%0A%20%20font%2Dsize%3A12px%3B%0A%20%20line%2Dheight%3A1%2E5em%3B%0A%20%20background%3A%23fefefe%3B%0A%20%20width%3A%2045em%3B%0A%20%20margin%3A%2010px%20auto%3B%0A%20%20padding%3A%201em%3B%0A%20%20outline%3A%201300px%20solid%20%23FAFAFA%3B%0A%7D%0A%0Aa%7B%20color%3A%20%230645ad%3B%20text%2Ddecoration%3Anone%3B%7D%0Aa%3Avisited%7B%20color%3A%20%230b0080%3B%20%7D%0Aa%3Ahover%7B%20color%3A%20%2306e%3B%20%7D%0Aa%3Aactive%7B%20color%3A%23faa700%3B%20%7D%0Aa%3Afocus%7B%20outline%3A%20thin%20dotted%3B%20%7D%0Aa%3Ahover%2C%20a%3Aactive%7B%20outline%3A%200%3B%20%7D%0A%0Aspan%2Ebacktick%20%7B%0A%20%20border%3A1px%20solid%20%23EAEAEA%3B%0A%20%20border%2Dradius%3A3px%3B%0A%20%20background%3A%23F8F8F8%3B%0A%20%20padding%3A0%203px%200%203px%3B%0A%7D%0A%0A%3A%3A%2Dmoz%2Dselection%7Bbackground%3Argba%28255%2C255%2C0%2C0%2E3%29%3Bcolor%3A%23000%7D%0A%3A%3Aselection%7Bbackground%3Argba%28255%2C255%2C0%2C0%2E3%29%3Bcolor%3A%23000%7D%0A%0Aa%3A%3A%2Dmoz%2Dselection%7Bbackground%3Argba%28255%2C255%2C0%2C0%2E3%29%3Bcolor%3A%230645ad%7D%0Aa%3A%3Aselection%7Bbackground%3Argba%28255%2C255%2C0%2C0%2E3%29%3Bcolor%3A%230645ad%7D%0A%0Ap%7B%0Amargin%3A1em%200%3B%0A%7D%0A%0Aimg%7B%0Amax%2Dwidth%3A100%25%3B%0A%7D%0A%0Ah1%2Ch2%2Ch3%2Ch4%2Ch5%2Ch6%7B%0Afont%2Dweight%3Anormal%3B%0Acolor%3A%23111%3B%0Aline%2Dheight%3A1em%3B%0A%7D%0Ah4%2Ch5%2Ch6%7B%20font%2Dweight%3A%20bold%3B%20%7D%0Ah1%7B%20font%2Dsize%3A2%2E5em%3B%20%7D%0Ah2%7B%20font%2Dsize%3A2em%3B%20border%2Dbottom%3A1px%20solid%20silver%3B%20padding%2Dbottom%3A%205px%3B%20%7D%0Ah3%7B%20font%2Dsize%3A1%2E5em%3B%20%7D%0Ah4%7B%20font%2Dsize%3A1%2E2em%3B%20%7D%0Ah5%7B%20font%2Dsize%3A1em%3B%20%7D%0Ah6%7B%20font%2Dsize%3A0%2E9em%3B%20%7D%0A%0Ablockquote%7B%0Acolor%3A%23666666%3B%0Amargin%3A0%3B%0Apadding%2Dleft%3A%203em%3B%0Aborder%2Dleft%3A%200%2E5em%20%23EEE%20solid%3B%0A%7D%0Ahr%20%7B%20display%3A%20block%3B%20height%3A%202px%3B%20border%3A%200%3B%20border%2Dtop%3A%201px%20solid%20%23aaa%3Bborder%2Dbottom%3A%201px%20solid%20%23eee%3B%20margin%3A%201em%200%3B%20padding%3A%200%3B%20%7D%0A%0A%0Apre%20%2C%20code%2C%20kbd%2C%20samp%20%7B%20%0A%20%20color%3A%20%23000%3B%20%0A%20%20font%2Dfamily%3A%20monospace%3B%20%0A%20%20font%2Dsize%3A%200%2E88em%3B%20%0A%20%20border%2Dradius%3A3px%3B%0A%20%20background%2Dcolor%3A%20%23F8F8F8%3B%0A%20%20border%3A%201px%20solid%20%23CCC%3B%20%0A%7D%0Apre%20%7B%20white%2Dspace%3A%20pre%3B%20white%2Dspace%3A%20pre%2Dwrap%3B%20word%2Dwrap%3A%20break%2Dword%3B%20padding%3A%205px%2012px%3B%7D%0Apre%20code%20%7B%20border%3A%200px%20%21important%3B%20padding%3A%200%3B%7D%0Acode%20%7B%20padding%3A%200%203px%200%203px%3B%20%7D%0A%0Ab%2C%20strong%20%7B%20font%2Dweight%3A%20bold%3B%20%7D%0A%0Adfn%20%7B%20font%2Dstyle%3A%20italic%3B%20%7D%0A%0Ains%20%7B%20background%3A%20%23ff9%3B%20color%3A%20%23000%3B%20text%2Ddecoration%3A%20none%3B%20%7D%0A%0Amark%20%7B%20background%3A%20%23ff0%3B%20color%3A%20%23000%3B%20font%2Dstyle%3A%20italic%3B%20font%2Dweight%3A%20bold%3B%20%7D%0A%0Asub%2C%20sup%20%7B%20font%2Dsize%3A%2075%25%3B%20line%2Dheight%3A%200%3B%20position%3A%20relative%3B%20vertical%2Dalign%3A%20baseline%3B%20%7D%0Asup%20%7B%20top%3A%20%2D0%2E5em%3B%20%7D%0Asub%20%7B%20bottom%3A%20%2D0%2E25em%3B%20%7D%0A%0Aul%2C%20ol%20%7B%20margin%3A%201em%200%3B%20padding%3A%200%200%200%202em%3B%20%7D%0Ali%20p%3Alast%2Dchild%20%7B%20margin%3A0%20%7D%0Add%20%7B%20margin%3A%200%200%200%202em%3B%20%7D%0A%0Aimg%20%7B%20border%3A%200%3B%20%2Dms%2Dinterpolation%2Dmode%3A%20bicubic%3B%20vertical%2Dalign%3A%20middle%3B%20%7D%0A%0Atable%20%7B%20border%2Dcollapse%3A%20collapse%3B%20border%2Dspacing%3A%200%3B%20%7D%0Atd%20%7B%20vertical%2Dalign%3A%20top%3B%20%7D%0A%0A%40media%20only%20screen%20and%20%28min%2Dwidth%3A%20480px%29%20%7B%0Abody%7Bfont%2Dsize%3A14px%3B%7D%0A%7D%0A%0A%40media%20only%20screen%20and%20%28min%2Dwidth%3A%20768px%29%20%7B%0Abody%7Bfont%2Dsize%3A16px%3B%7D%0A%7D%0A%0A%40media%20print%20%7B%0A%20%20%2A%20%7B%20background%3A%20transparent%20%21important%3B%20color%3A%20black%20%21important%3B%20filter%3Anone%20%21important%3B%20%2Dms%2Dfilter%3A%20none%20%21important%3B%20%7D%0A%20%20body%7Bfont%2Dsize%3A12pt%3B%20max%2Dwidth%3A100%25%3B%20outline%3Anone%3B%7D%0A%20%20a%2C%20a%3Avisited%20%7B%20text%2Ddecoration%3A%20underline%3B%20%7D%0A%20%20hr%20%7B%20height%3A%201px%3B%20border%3A0%3B%20border%2Dbottom%3A1px%20solid%20black%3B%20%7D%0A%20%20a%5Bhref%5D%3Aafter%20%7B%20content%3A%20%22%20%28%22%20attr%28href%29%20%22%29%22%3B%20%7D%0A%20%20abbr%5Btitle%5D%3Aafter%20%7B%20content%3A%20%22%20%28%22%20attr%28title%29%20%22%29%22%3B%20%7D%0A%20%20%2Eir%20a%3Aafter%2C%20a%5Bhref%5E%3D%22javascript%3A%22%5D%3Aafter%2C%20a%5Bhref%5E%3D%22%23%22%5D%3Aafter%20%7B%20content%3A%20%22%22%3B%20%7D%0A%20%20pre%2C%20blockquote%20%7B%20border%3A%201px%20solid%20%23999%3B%20padding%2Dright%3A%201em%3B%20page%2Dbreak%2Dinside%3A%20avoid%3B%20%7D%0A%20%20tr%2C%20img%20%7B%20page%2Dbreak%2Dinside%3A%20avoid%3B%20%7D%0A%20%20img%20%7B%20max%2Dwidth%3A%20100%25%20%21important%3B%20%7D%0A%20%20%40page%20%3Aleft%20%7B%20margin%3A%2015mm%2020mm%2015mm%2010mm%3B%20%7D%0A%20%20%40page%20%3Aright%20%7B%20margin%3A%2015mm%2010mm%2015mm%2020mm%3B%20%7D%0A%20%20p%2C%20h2%2C%20h3%20%7B%20orphans%3A%203%3B%20widows%3A%203%3B%20%7D%0A%20%20h2%2C%20h3%20%7B%20page%2Dbreak%2Dafter%3A%20avoid%3B%20%7D%0A%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2 id="глава-94.-роли.-часть-5">Глава 94. Роли. Часть 5</h2>
+<p><em>Первое собрание:</em></p>
+<p>В 6.07 утра 17-го апреля 1992 года вы могли бы видеть из замка Хогвартс, как солнце встало над горизонтом, проникло сквозь задёрнутые занавеси в спальню Когтеврана для мальчиков-первокурсников, озарив её мягким красновато-оранжевым светом рассвета, чуть-чуть изменённым из-за белой ткани, закрывающей окна, и недостаточным пока, чтобы разбудить мальчиков, более привычных к зимнему режиму.</p>
+<p>На одной из многих кроватей Гарри Поттер спал сном обессилевшего человека.</p>
+<p>Бесшумно открылась дверь.</p>
+<p>Бесшумно ступила в комнату чья-то фигура.</p>
+<p>Она подошла к кровати Гарри Поттера.</p>
+<p>Фигура положила руку на плечо спящего мальчика, тот вздрогнул и вскрикнул.</p>
+<p>Никто его не услышал.</p>
+<p><em>The first meeting:</em></p>
+<p>At 6:07am on April 17th, 1992 the Sun was just rising above the horizon as seen from the castle Hogwarts, filtering in through drawn curtains in the Ravenclaw first-year boys’ dorm to provide a gentle light, red-orange for dawn and little-changed by the white fabric covering the windows, not yet waking boys more accustomed to winter’s schedule.</p>
+<p>In one bed among many, Harry Potter slept the sleep of the just exhausted.</p>
+<p>Quietly the door opened.</p>
+<p>Quietly a figure walked across the floor.</p>
+<p>That figure came to Harry Potter’s bed.</p>
+<p>The figure laid a hand on the shoulder of the sleeping boy, who started and shrieked.</p>
+<p>No others heard.</p>
+<ul>
+<li>Мистер Поттер, - пропищал маленький человечек, - Директор просит вас немедленно придти.</li>
+</ul>
+<p>Мальчик медленно сел на кровати, его руки начали искать что-то под покрывалом. Он ожидал, что будет чувствовать себя куда хуже, проснувшись этим утром. Это было как-то… неправильно, что его мозг продолжал функционировать, что его разум продолжал мыслить, что он не вышел из строя и не проплакал по меньшей мере неделю. Мальчик знал, что это не было адаптивной реакцией, потому что разум не был в этом задействован. И его Тёмная сторона тоже, конечно, этого не сделала бы. Тем не менее, было что-то неправильное в том, что этим утром он был жив и мыслил ясно.</p>
+<p>Но его решение вернуть к жизни \оживить Гермиону было… достаточным, словно он уже сделал что-то правильное, шёл по верному пути, и она вернётся, вот и всё; значит, надо отбросить печаль. Теперь нечего было решать, не осталось неопределённостей, не осталось противоречий, которые могли бы его разрывать, и не было нужды вспоминать о том, что он <em>видел</em>…</p>
+<p>“Mr. Potter,” the small man squeaked, “the Headmaster has requested your presence immediately.”</p>
+<p>Slowly the boy sat up in bed, his hands momentarily fiddling beneath the covers. He’d expected to feel much worse, waking up this morning. It felt… wrong, that his brain functioned now, that his thoughts still moved, that he wasn’t incapacitated with weeping for at least a week. The boy knew that it wouldn’t have been an adaptive response, for brains to evolve to do that. His dark side, certainly, would not do that. Even so, it still felt wrong to be alive and lucid, this morning.</p>
+<p>But his resolution to revive Hermione Granger felt - sufficient, like he was already doing the right thing, bent on the right path, and she would be brought back, and that was all there was to it; grief would have been giving up. There was nothing left to decide, no ambiguity, no conflict to tear at him, and no need to remember what he’d <em>seen</em> -</p>
+<ul>
+<li>Я переоденусь, - сказал Гарри.</li>
+</ul>
+<p>Профессор Флитвик выглядел смущённым, но ответил своим высоким голосом:</p>
+<ul>
+<li>Директор уточнил, чтобы вы были прямиком доставлены в его кабинет безо всякого промедления, мистер Поттер. Прошу прощения.</li>
+</ul>
+<p>Меньше чем через минуту - профессор Флитвик послал его напрямую в кабинет Директора через внутреннюю каминную сеть Хогвартса - Гарри, всё ещё одетый в пижаму, оказался пред лицом Альбуса Дамблдора. Заместитель директора тоже была здесь, она сидела в другом кресле, и профессор Зельеварения притаился среди загадочных устройств, и как раз широко зевал, когда Гарри прошёл через камин.</p>
+<p>“I’ll get dressed,” Harry said.</p>
+<p>Professor Flitwick looked rather reluctant, but said in his high voice, “The Headmaster specified you were to be brought to his office directly and without pause, Mr. Potter. I’m sorry.”</p>
+<p>Less than a minute later - Professor Flitwick had sent him straight to the Headmaster’s office through the Hogwarts internal Floo - Harry found himself, still in his pajamas, facing Albus Dumbledore. The Deputy Headmistress was also sitting in another chair, and the Potions Master lurked nearby amid the weird devices, caught in a gaping yawn just as Harry had entered through the fireplace.</p>
+<ul>
+<li><p>Гарри, - без предисловий сказал директор, - прежде чем я скажу то, что должен сказать, я повторяю, что Гермиона Грейнджер на самом деле умерла. Охранные чары обнаружили это и известили меня. Сами камни поведали, что умерла волшебница. Я проверил её тело, и там лежали действительно останки Гермиона Грейнджер, это не было куклой или чем-то вроде. Не существует никакого известного способа исправить смерть. Учитывая всё сказанное - тело Гермионы Грейнджер исчезло из комнаты, где оно находилось, и где ты сидел над ним. Ты его забрал, Гарри Поттер?</p></li>
+<li><p>Нет, - сказал Гарри, прикрыв глаза. Он заметил, что Северус сосредоточенно наблюдал за ним.</p></li>
+</ul>
+<p>Взгляд директора тоже был пристальным, хотя и не враждебным.</p>
+<ul>
+<li><p>Тело Гермионы Грейнджер сейчас у тебя?</p></li>
+<li><p>Нет.</p></li>
+<li><p>Ты знаешь, где оно?</p></li>
+<li><p>Нет.</p></li>
+<li><p>Ты знаешь, кто забрал его?</p></li>
+</ul>
+<p>“Harry,” the Headmaster said without preamble, “before I say what I must say next, I tell you that Hermione Granger did truly die. The wards recorded it and informed me. The very stones spoke that a witch had died. I tested her body where it lay and those were Hermione Granger’s true mortal remains, not any doll or likeness. There is no way known to wizardry by which death may be undone. All this being said, Hermione Granger’s remains are now missing from the storeroom where they were placed, and where you guarded them. Did you take them, Harry Potter?”</p>
+<p>“No,” Harry said, narrowing his eyes. A glance showed him that Severus was watching him intently.</p>
+<p>Dumbledore’s gaze was also keen, though not unfriendly. “Is Hermione Granger’s body in your possession?”</p>
+<p>“No.”</p>
+<p>“Do you know where it is?”</p>
+<p>“No.”</p>
+<p>“Do you know who took it?”</p>
+<ul>
+<li>Нет, - ответил Гарри, потом поколебался и добавил: - Если не считать очевидных вероятностных предположений, которые не основаны ни на каких конкретных данных, которыми я мог бы обладать.</li>
+</ul>
+<p>Старый волшебник кивнул.</p>
+<ul>
+<li><p>Ты знаешь, зачем его забрали?</p></li>
+<li><p>Нет. Если не считать предположений и так далее.</p></li>
+<li><p>И что это за предположения? - острый взгляд старческих глаз.</p></li>
+<li><p>Если враг мог заметить, что вы сбегали посоветоваться к близнецам Уизли во время урока, после ареста Гермионы, и узнать, что магическая карта украдена, как вы говорите, тогда он мог заинтересоваться, зачем я сторожил тело Гермионы. Моя очередь. Это вы организовали убийство Гермионы в надежде, что я верну деньги, отданные Люциусу?</p></li>
+<li><p><em>Что?</em> - воскликнула профессор МакГонагалл.</p></li>
+<li><p>Нет, - ответил старый волшебник.</p></li>
+<li><p>Вы знали, или подозревали, что Гермиона умрёт?</p></li>
+<li><p>Я не знал. Что же до подозрений, то я сделал всё, что мог, для её защиты от Волдеморта. Я не желал её убийства, не давал на него разрешения и не планировал воспользоваться им, Гарри Поттер. А теперь покажи мне свой кошель.</p></li>
+</ul>
+<p>“No,” Harry said, then hesitated. “Besides the obvious probabilistic speculations which are not based upon any specific knowledge of mine.”</p>
+<p>The old wizard nodded. “Do you know why it was taken?”</p>
+<p>“No. Besides the obvious speculations etcetera.”</p>
+<p>“What would those be?” Sharp the ancient eyes.</p>
+<p>“If the enemy can notice you running off to consult the Weasley twins during class after Hermione was arrested, and find out about that magic map you said was stolen, then the enemy can wonder why I was guarding Hermione Granger’s body. My turn. Did you arrange for Hermione’s death in hopes of getting the money back from Lucius?”</p>
+<p>“<em>What?</em> ” said Professor McGonagall.</p>
+<p>“No,” said the old wizard.</p>
+<p>“Did you know or suspect that Hermione Granger would die?”</p>
+<p>“I did not know. As for suspicions, I placed her in the most strongly defended position I could, against Voldemort. I did not will her death, nor allow it, nor plan to benefit from it, Harry Potter. Now show me your pouch.”</p>
+<ul>
+<li><p>Он в моем сунду… - начал Гарри.</p></li>
+<li><p>Северус, - сказал старый волшебник, и учитель Зельеварения выступил вперёд. - Проверь сундук тоже, каждое отделение.</p></li>
+<li><p>На моём сундуке охранные чары.</p></li>
+</ul>
+<p>Северус Снейп невесело усмехнулся и шагнул в зелёное пламя.</p>
+<p>Дамблдор достал свою тёмно-серую палочку и начал водить ей рядом с волосами Гарри, словно маггл, использующий металодетектор. Не дойдя до шеи Гарри, Дамблдор остановился.</p>
+<ul>
+<li>Камень в твоём кольце, - сказал Дамблдор. - Там раньше был бриллиант чистой воды. А теперь он коричневый, цвета глаз Гермионы Грейнджер и её волос.</li>
+</ul>
+<p>“It’s in my trunk -” Harry began.</p>
+<p>“Severus,” said the old wizard, and the Potions Master moved forward. “Check his trunk as well, every compartment.”</p>
+<p>“My trunk has wards.”</p>
+<p>Severus Snape grinned mirthlessly and strode into the green flame.</p>
+<p>Dumbledore took out his long dark-grey wand and began to wave it close around Harry’s hair, looking like a Muggle using a metal-detector. Before he had reached as far as Harry’s neck, Dumbledore stopped.</p>
+<p>“The gem upon your ring,” Dumbledore said. “It is no longer a clear diamond. It is brown, the color of Hermione Granger’s eyes, and the color of her hair.”</p>
+<p>В комнате повисло внезапное напряжение.</p>
+<ul>
+<li><p>Это камень моего отца, - ответил Гарри. - Трансфигурированный также, как раньше. Я просто сделал его таким в память о Гермионе…</p></li>
+<li><p>Я должен быть уверен. Сними кольцо, Гарри, и положи его на мой стол.</p></li>
+</ul>
+<p>Гарри медленно подчинился, вынул камень из кольца, и положил кольцо и камень на стол, по разным углам.</p>
+<p>Дамблдор направил палочку на камень и -</p>
+<p>Большой, бесформенный серый камень подпрыгнул в воздухе под силой внезапного расширения, ударился о невидимый барьер в воздухе над ним и потом с громким шумом упал с директорского стола.</p>
+<ul>
+<li>Теперь мне придётся снова убить полчаса на то, чтобы трансфигурировать его обратно, - бесстрастно сказал Гарри.</li>
+</ul>
+<p>A sudden tension filled the room.</p>
+<p>“That’s my father’s rock,” Harry said. “Transfigured the same as before. I just did it to remember Hermione -”</p>
+<p>“I must be sure. Take off that ring, Harry, and place it upon my desk.”</p>
+<p>Slowly, Harry did so, removing the gem and setting the ring off to the other side of the desk.</p>
+<p>Dumbledore pointed his wand at the gem and -</p>
+<p>A large, undistinguished grey rock jumped into the air from the force of its sudden expansion, hit some invisible barrier in the air above, and then fell with a loud crack upon the Headmaster’s desk,</p>
+<p>“There’s another half-hour of work for me, Transfiguring it again,” Harry said evenly.</p>
+<p>Дамблдор продолжил осмотр. Гарри пришлось снять левый ботинок и показать кольцо, которое он носил на пальце ноги - экстренный портключ на случай, если кто-то его похитит и заберёт из-под защиты чар Хогвартса (и при этом не наложит анти-аппарационных, анти-портключовых, анти-фениксовых и анти-маховиковременных заклинаний, что, как предупредил Гарри Северус, без сомнения, сделает любой Пожиратель Смерти внутреннего круга). Дамблдор удостоверился, что магия, исходящая от кольца, на самом деле была магией портключа, а не следом трансфигурации. Остаток Гарри был признан чистым.</p>
+<p>Вскоре после этого учитель Зельеварения вернулся с кошелём Гарри и с несколькими другими магическими вещами, которые хранились у Гарри в сундуке, и директор проверил их тоже, одну за другой, вплоть до каждого предмета, остававшегося в наборе целителя.</p>
+<p>Dumbledore resumed his examination. Harry had to remove his left shoe, and take off the toe-ring that was his emergency portkey if someone kidnapped him and took him outside the wards of Hogwarts (and didn’t put up anti-Apparition, anti-portkey, anti-phoenix, and anti-time-looping wards, which Severus had warned Harry that any inner-circle Death Eater would certainly do). It was verified that the magic radiating from the toe-ring was indeed the magic of a portkey, and not the magic of a Transfiguration. The rest of Harry was deemed clear.</p>
+<p>Not long after, the Potions Master returned, bearing Harry’s pouch, and several other magical things which had been in Harry’s trunk, which the Headmaster also examined, one by one, even to all the items remaining within the healer’s kit.</p>
+<ul>
+<li>Теперь я могу идти? - спросил Гарри, когда с этим было покончено, вкладывая в свой тон столько льда, сколько мог. Он забрал свой кошель и начал скармливать ему серый камень. Пустое кольцо он снова надел на палец.</li>
+</ul>
+<p>Старый волшебник вздохнул\выдохнул, пряча свою палочку обратно в рукав.</p>
+<ul>
+<li><p>Я <em>прошу прощения</em>, - сказал он. - Мне нужно было знать\удостовериться. Гарри… похоже, Тёмный Лорд похитил останки Гермионы Грейнджер. Не могу придумать, чего он хочет этим достичь, разве что послать её тело к тебе в качестве зомби. Северус даст тебе несколько зелий для защиты. Будь настороже и готовься к часу, когда ты должен будешь сделать то, что должно.</p></li>
+<li><p>У зомби будет разум Гермионы?</p></li>
+<li><p>Нет…</p></li>
+<li><p>Тогда это будет не она. Я могу идти? Я хочу наконец переодеться.</p></li>
+<li><p>Есть другие вести, но я буду краток. Чары Хогвартса свидетельствуют, что ни одно постороннее существо не входило, а также, что Гермиону Грейнджер убил профессор Защиты.</p></li>
+<li><p>Хм, - сказал Гарри.</p></li>
+</ul>
+<p>“Can I go now?” Harry said when it was all done, putting as much cold as he could into his voice. He took up his pouch, and began the process of feeding the grey rock into it. The empty ring went back on his finger.</p>
+<p>The old wizard breathed out, slipping his wand back into his sleeve. “I <em>am</em> sorry,” he said. “I had to know. Harry… the Dark Lord has taken Hermione Granger’s remains, it seems. I cannot think of anything he would gain thereby, except to send her corpse against you as an Inferius. Severus shall give you certain potions to keep about your person. Be warned now, and be prepared for when you must do what must be done.”</p>
+<p>“Will the Inferius have Hermione’s mind?”</p>
+<p>“No -”</p>
+<p>“Then it’s not her. Can I go? At least to change out of my pyjamas.”</p>
+<p>“There is other news, but I shall be brief. The wards of Hogwarts record that no foreign creature has entered, and that it was the Defense Professor who killed Hermione Granger.”</p>
+<p>“Um,” Harry said.</p>
+<p><em>Мысль 1: Но я же видел, как тролль убил Гермиону.</em></p>
+<p><em>Мысль 2: Профессор Квиррелл наложил на меня заклятие Ложной Памяти, и обставил место происшествия так, как оно выглядело, когда Дамблдор прибыл.</em></p>
+<p><em>Мысль 3: Профессор Квиррелл не может этого сделать, его магия не может касаться меня\воздействовать на меня. Я наблюдал это в Азкабане…</em></p>
+<p><em>Мысль 4: Я могу верить этим воспоминаниям\принимать эти воспоминания на веру?</em></p>
+<p><em>Мысль 5: В Азкабане точно случилась какая-то авария\произошёл какой-то ахтунг, нам бы не понадобилась ракета, если бы профессор Квиррелл не потерял сознание, а почему бы он потерял сознание, если бы не…</em></p>
+<p><em>Мысль 6: А был ли я вообще в Азкабане?</em></p>
+<p><em>Мысль 7: Я точно в какой-то момент практиковался\у меня была возможность попрактиковаться в контролировании дементоров до того, как я испугал того дементора в Визенгамоте. А</em> это <em>было даже в газетах.</em></p>
+<p><em>Мысль 8: А правильно ли я помню, что было в газетах?</em></p>
+<p><em>Thought 1: But I saw the troll kill Hermione.</em></p>
+<p><em>Thought 2: Professor Quirrell Memory-Charmed me and set up the scene that Dumbledore saw when he arrived.</em></p>
+<p><em>Thought 3: Professor Quirrell can’t do that, his magic can’t touch mine. I saw that in Azkaban -</em></p>
+<p><em>Thought 4: Can I trust those memories?</em></p>
+<p><em>Thought 5: There was clearly some sort of debacle at Azkaban, we wouldn’t have needed a rocket if Professor Quirrell hadn’t fallen unconscious, and why’d he be unconscious if not -</em></p>
+<p><em>Thought 6: Did I ever actually go to Azkaban at all?</em></p>
+<p><em>Thought 7: I clearly practiced controlling Dementors at some point before I scared that Dementor in the Wizengamot. And</em> that <em>was in the newspapers.</em></p>
+<p><em>Thought 8: Am I accurately remembering the newspapers?</em></p>
+<ul>
+<li><p>Хм, - снова сказал Гарри. - Это заклинание заслуживает того, чтобы его отнесли к Непростительным. Так вы считаете, что профессор Квиррелл подделал мои воспоминания…</p></li>
+<li><p>Нет. Я отправился назад во времени и установил несколько инструментов для записи последней битвы Гермионы, ибо не в силах был лично её пронаблюдать, - лицо старого волшебника было угрюмым. - Твоя догадка оказалась верна, Гарри Поттер. Волдеморт испортил всё, что мы дали Гермионе для защиты. Метла осталась неподвижна в её руках. Мантия-невидимка не утаила её. Тролль прошёл под солнечным светом, не получив вреда, - он был не заблудившейся тварью, но оружием, безупречным и нацеленным. И он действительно убил её, использовав только физическую силу, так что мои чары и ловушки для обнаружения враждебной магии оказались бесполезны. Профессор Защиты ни разу не возник на её пути.</p></li>
+</ul>
+<p>Гарри сглотнул, закрыл глаза и подумал: “Итак, это попытка подставить профессора Квиррелла. Похоже, это <em>modus operandi</em> врага. Тролль съедает Гермиону Грейнджер, а проверь-ка чары - о, да похоже, это дело рук профессора Защиты, как и в прошлом году… нет. Нет, это не может быть правильно.</p>
+<p>“Um,” Harry said again. “That spell seriously ought to be Unforgiveable. You think Professor Quirrell could have Memory-Charmed -”</p>
+<p>“No. I went back through time and placed certain instruments to record Hermione’s last battle, which I could not quite bear to watch in my own person.” The old wizard looked very grim indeed. “Your guess was right, Harry Potter. Voldemort sabotaged everything we gave Hermione to protect her. Her broomstick lay dead in her hands. Her invisibility cloak did not conceal her. The troll walked in the sunlight unharmed; it was no stray creature, but a weapon pure and aimed. And it was indeed the troll who killed her, with strength alone, so that my wards and webs to detect hostile magics went for naught. The Defense Professor never crossed her path.”</p>
+<p>Harry swallowed, shut his eyes, and thought. “So this was an attempted frame on Professor Quirrell. Somehow. It does seem to be the enemy’s <em>modus operandi.</em> Troll eats Hermione Granger, check the wards, oh look actually the Defense Professor did it, same as last year… no. No, that can’t be right.”</p>
+<ul>
+<li><p>Почему нет, мистер Поттер? - спросил профессор Зельеварения. - Мне это кажется достаточно очевидным…</p></li>
+<li><p>В этом-то и проблема.</p></li>
+</ul>
+<p><em>Враг умён.</em></p>
+<p>Сон медленно переставал туманить разум, и теперь, после ночного отдыха, его мозг был способен видеть вещи, неочевидные накануне.</p>
+<p>Если следовать книжным стандартам\обычаям книжных приключений… не предполагается, что враг будет следить за тем, что ты делаешь, портить магические артефакты, которыми тебя снабдили, а потом пошлёт тролля, которого сделает необнаружаемым\замаскирует при помощи таких средств, что герой не может в них разобраться даже когда уже всё позади, и получается, что с таким же успехом ты мог бы вообще ничего не делать для своей защиты. В книгах в центре внимания обычно только главные герои. Если враг в результате планирования и действий, оставленных вне поля зрения читателя, просто сводит на нет всю работу протагониста, то получается <em>дьявол из машины</em>, что неэффективно с точки зрения драматизма./</p>
+<p>Но в настоящей жизни враг - сам себе главный герой, и он тоже будет умён, и будет думать наперёд, даже если ты об этом не знаешь. Вот почему всё в этом деле кажется таким несвязным, и есть фрагменты, которые не объясняютя и кажутся необъяснимыми. Что почувствовал Люциус, когда Гарри угрожал Дамблдору разрушить Азкабан? Что почувствовали авроры в Азкабане, когда увидели метлу, поднимающуюся за счёт языка огня?</p>
+<p><em>Враг умён</em>.</p>
+<p>“Why not, Mr. Potter?” said the Potions Master. “It seems obvious enough to me -”</p>
+<p>“That’s the problem.”</p>
+<p><em>The enemy is smart.</em></p>
+<p>Slowly the fog of sleep was drifting out of Harry’s mind, and after a full night’s sleep his brain could see the things which hadn’t been obvious the day before.</p>
+<p>Under standard literary convention… the enemy wasn’t supposed to look over what you’d done, sabotage the magic items you’d handed out, and then send out a troll rendered undetectable by some means the heroes couldn’t figure out even after the fact, so that you might as well have not defended yourself at all. In a book, the point-of-view usually stayed on the main characters. Having the enemy just bypass all the protagonists’ work, as a result of planning and actions taken out of literary sight, would be a <em>diabolus ex machina,</em> and dramatically unsatisfying.</p>
+<p>But in real life the enemy would think that they were the main character, and they would also be clever, and think things through in advance, even if you didn’t see them do it. That was why everything about this felt so disjointed, with parts unexplained and seemingly inexplicable. How had Lucius felt, when Harry had threatened Dumbledore with breaking Azkaban? How had the Aurors above Azkaban felt, seeing the broomstick rise up on a torch of fire?</p>
+<p><em>The enemy is smart.</em></p>
+<ul>
+<li>Враг совершенно точно знал, что вы вернетесь обратно во времени для проверки, что произошло в действительности с Гермионой, особенно потому, что факт вторжения тролля в Хогвартс в общем означает сущестование кого-то, кто способен обходить охранные чары. - Гарри закрыл глаза и задумался сильнее, пытаясь поставить себя на место врага. Зачем он или его темная сторона сделали бы подобное? - Мы приходим к выводу, что враг может контролировать то, что нам сообщают охранные чары. Однако это представляет для врага определенную сложность или может быть проделано при специфических условиях; они пытаются создать ложное впечатление всемогущества. - <em>Как и я. -</em> Впоследствии, гипотетически, охранные чары показывают как профессор Синистра убивает кого-то. Мы думаем, что охранные чары были снова обмануты, а на самом деле профессор Синистра подверглась легилеменции и сделала это.</li>
+</ul>
+<p>“The enemy knew perfectly well that you’d turn back time to check what really happened to Hermione, especially since the troll getting into Hogwarts at all tells us that somebody can fool the wards.” Harry shut his eyes, thinking harder, trying to put himself into the enemy’s shoes. Why would he, or his dark side, have done something like - “We’re meant to conclude that the enemy has control of what the wards tell us. But that’s actually something the enemy can only do with difficulty, or under special conditions; they’re trying to create a false appearance of omnipotence.” <em>Like I would.</em>“Later, hypothetically, the wards show Professor Sinistra killing someone. We think the wards are just being fooled again, but really, Professor Sinistra was Legilimized and she<em>did</em> do it.”</p>
+<ul>
+<li>Если это не те мысли, которых и ожидает от нас Темный Лорд. - Сказал Северус Снейп, нахмурив брови в размышлении.- В этом случае он может контролировать охранные чары и профессор Синистра будет невиновна.</li>
+</ul>
+<p>“Unless that is precisely what the Dark Lord expects us to think,” said Severus Snape, his brow furrowed in concentration. “In which case he does have control of the wards, and Professor Sinistra will be innocent.”</p>
+<ul>
+<li><p>Темный Лорд на самом деле использует планы с таким уровнем вложенн…</p></li>
+<li><p>Да, - сказали Дамблдор и Северус.</p></li>
+</ul>
+<p>“Does the Dark Lord <em>really</em> use plots with that many levels of meta -”</p>
+<p>“Yes,” said Dumbledore and Severus.</p>
+<p>Гарри рассеянно кивнул.</p>
+<ul>
+<li><p>Тогда это может быть ловушка, устроенная с целью либо заставить нас верить охранным чарам, когда они лгут, либо думать, что чары лгут, когда они правдивы, в зависимости от уровня мышления, которого ожидает от нас враг. Но если враг планирует, что мы верим чарам - мы бы поверили им в любом случае, пока у нас не появились бы причины не доверять им. Таким образом нет нужды стараться подставить профессора Квиррелла таким способом, которым мы бы подумали мы должны подумать, просто для того, чтобы навести нас на ложное вложе…</p></li>
+<li><p>Не так сложно, - прервал Дамблдор. - Если бы Волдеморт подчинил себе охранные чары не полностью, тогда чары бы свидетельствовали, что замешан кто-то из учителей. Также они бы подняли тревогу при ранении мисс Грейнджер, а не тогда. когда она уже была мертва.</p></li>
+</ul>
+<p>Гарри поднял руку и потёр лоб под чёлкой.</p>
+<p>Harry nodded distantly. “Then this could be a setup to either make us think the wards are telling the truth when they’re lying, or a setup to make us think the wards are lying when they’re telling the truth, depending on what level the enemy expects us to reason at. But if the enemy is planning to make us trust the wards - we would have trusted the wards anyway, if we’d been given no reason to distrust them. So there’s no need to go to all the work of framing Professor Quirrell in a way that we would realize we were intended to discover, just to trick us into going meta -”</p>
+<p>“Not so,” said Dumbledore. “If Voldemort has not fully mastered the wards, then the wards had to believe that some Professor’s hand was at work. Else they would have cried out at Miss Granger’s injury, and not only upon her death.”</p>
+<p>Harry reached up a hand and rubbed at his brow, just beneath his hair.</p>
+<p><em>ОК, серьёзный вопрос. Если враг настолько умён, какого чёрта я до сих пор жив? Действительно ли так трудно отравить человека, из-за того, что чары, зелья и безоаровые камни могут вылечить меня буквально от всего, что может быть подсыпано в мой завтрак? Способны ли охранные чары зафиксировать это, обнаружить магию убийцы?</em></p>
+<p><em>Возможно ли, что мой</em> шрам <em>содержит фрагмент души, который удерживает Тёмного Лорда в этом мире, и потому он не может убить меня? Взамен он пытается отвадить от меня всех друзей, чтобы ослабить мой дух и одержать победу над телом? Это бы объясняло владение Парселтангом. Распределяющей Шляпе может быть не по силам обнаружить штуковину-для-оживления-жмуриков lich-phylactery-thingy. Очевидная проблема 1: предполагается, что Тёмный Лорд сделал себе штуковину-для-оживления-жмуриков в 1943 году, убив как-там-её-звали, и подставив мистера Хагрида. Очевидная проблема 2: души не существует.</em></p>
+<p><em>Хотя Дамблдор также предположил, что моя кровь - ключевой ингридиент в ритуале по возвращению всей силы Тёмного Лорда, а значит, я должен быть живым ко времени ритуала… Что ж, это радует.</em></p>
+<p><em>Okay, serious question. If the enemy is that smart, why the heck am I still alive? Is it seriously that hard to poison someone, are there Charms and Potions and bezoars which can cure me of literally anything that could be slipped into my breakfast?</em> <em>Would the wards record it, trace the magic of the murderer?</em></p>
+<p><em>Could my</em> scar <em>contain the fragment of soul that’s keeping the Dark Lord anchored to the world, so he doesn’t want to kill me? Instead he’s trying to drive off all my friends to weaken my spirit so he can take over my body? It’d explain the Parselmouth thing. The Sorting Hat might not be able to detect a lich-phylactery-thingy. Obvious problem 1, the Dark Lord is supposed to have made his lich-phylactery-thingy in 1943 by killing whatshername and framing Mr. Hagrid. Obvious problem 2, there’s no such thing as souls.</em></p>
+<p><em>Though Dumbledore also thought that my blood was a key ingredient in a ritual to restore the Dark Lord’s full strength, which would require keeping me alive until then… now there’s a cheery thought.</em></p>
+<ul>
+<li><p>Так, - сказал Гарри. - Я уверен в одном.</p></li>
+<li><p>И в чём же?</p></li>
+<li><p>Невилла нужно забрать из Хогвартса <em>немедленно</em>. Он очевидно является следующей мишенью, а не один первокурсник не может пережить такой уровень угрозы. Нам повезло, что Невилла не убили вчера вечером, враг не будет ждать, пока мы снимем траур, прежде, чем нанести следующий удар\сделать новый ход.</p></li>
+</ul>
+<p><em>Почему враг не ударил, пока мы отвлеклись?</em></p>
+<p>Дамблдор обменялся взглядами с Северусом, затем - с МакГонагалл, чьё выражение лица внезапно стало непроницаемым.</p>
+<ul>
+<li><p>Гарри, - сказал старый волшебник, - если ты сам отдалишь от себя всех друзей, это будет то же самое, как если бы Волдеморт…</p></li>
+<li><p>Я буду <em>отлично</em> себя чувствовать, и могу прожить без Невилла пару лишних месяцев, вряд ли вы планируете заставить моих друзей остаться здесь на лето, и вообще, это <em>недостаточное оправдание</em>, чтобы позволить им быть убитыми! Профессор МакГонагалл…</p></li>
+</ul>
+<p>“Well…” Harry said. “I’m sure of one thing.”</p>
+<p>“And that is?”</p>
+<p>“Neville needs to be taken out of Hogwarts <em>now.</em> He’s the obvious next target and no first-year student can survive this level of offense. We’re lucky Neville wasn’t assassinated yesterday evening, the enemy doesn’t have to wait until we’re finished mourning to make their next move.” <em>Why didn’t the enemy strike while we were distracted?</em></p>
+<p>Dumbledore exchanged glances with Severus, and then with the suddenly tight expression of Professor McGonagall. “Harry,” said the old wizard, “if you send all your friends away yourself, that is just the same as if Voldemort -”</p>
+<p>“I will be <em>fine</em> I can do without Neville for a couple of extra months it’s not like you were planning to make my friends stay here over the summer and that is just plain <em>not sufficient justification</em> to let him get killed! Professor McGonagall -”</p>
+<ul>
+<li><p>Я совершенно согласна, - сказала волшебница из Шотладнии. - Я в высшей степени согласна. Я согласна до такой степени, что… Я даже высказать не могу, до какой степени, Альбус…</p></li>
+<li><p>До такой степени, что вы вытащите его отсюда сами, что бы кто ни сказал, потому что если Невилла убьют, вы не сможете оправдаться тем, что просто следовали приказу? - предположил Гарри.</p></li>
+</ul>
+<p>Профессор МакГонагалл только закрыла глаза.</p>
+<ul>
+<li>Да, но ведь должен же существовать какой-то способ вести себя как отвественный человек, и при этом обходиться без угроз односторонних действий\никому не угрожать односторонними действиями.</li>
+</ul>
+<p>Директор вздохнул.</p>
+<ul>
+<li><p>В этом нет нужды. Можете идти, Минерва.</p></li>
+<li><p>Погодите, - сказал профессор Зельеварения как раз в тот момент, когда профессор МакГонагалл весьма поспешно взяла щепотку зелёного порошка из вазы у камина. - Мы не должны привлекать внимание к мальчику, так, как директор привлёк внимание к близнецам Уизли. Я думаю, будет разумнее, если мистера Лонгботтома заберёт из Хогвартса его бабушка. Пусть он пока останется в гостинной, не в обычае Тёмного Лорда действовать настолько открыто.</p></li>
+</ul>
+<p>Снова последовал долгий обмен взглядами между ними четырьмя, наконец Гарри, а затем и профессор МакГонагалл, кивнули.</p>
+<ul>
+<li><p>В таком случае, - сказал Гарри, - Я уверен ещё в одной вещи.</p></li>
+<li><p>И что это? - спросил Дамблдор.</p></li>
+<li><p>Мне очень нужно посетить уборную, и ещё мне бы не хотелось больше оставаться в пижаме.</p></li>
+</ul>
+<p>“I quite agree,” said the Scottish witch. She frowned. “I extremely agree. I agree to the point where… I’m having some trouble figuring out how to express this, Albus…”</p>
+<p>“To the point where you’re going to haul him out of there yourself, regardless of what anyone else says, because it’s no excuse to say you were only following orders if Neville gets killed?” Harry said.</p>
+<p>Professor McGonagall closed her eyes briefly. “Yes, but surely there ought to be some way to be responsible without threats of unilateral action.”</p>
+<p>The Headmaster sighed. “No need. Go, Minerva.”</p>
+<p>“Wait,” the Potions Master said, just as Professor McGonagall, moving rather swiftly, was taking a pinch of green dust from the Floo-vase. “We should not call attention to the boy, as the Headmaster called attention to the Weasley twins. It would be wiser, I think, if Mr. Longbottom’s grandmother took him from Hogwarts. Let him stay in his Common Room for now; the Dark Lord does not seem able to act so openly.”</p>
+<p>There was another long exchange of glances among the four, and finally Harry nodded, followed by Professor McGonagall.</p>
+<p>“In that case,” said Harry, “I’m sure of one other thing.”</p>
+<p>“And that is?” said Dumbledore.</p>
+<p>“I very much need to visit the washroom, and I would also like to change out of these pyjamas.”</p>
+<p>***</p>
+<ul>
+<li>Кстати, - сказал Гарри, когда они с директором перенеслись через камин в пустой кабинет декана Когтеврана. - Один последний маленький вопрос, который я хотел задать лично вам. Тот меч, который близнецы Уизли вытащили из Сортировочной Шляпы. Это был меч Гриффиндора, не так ли?</li>
+</ul>
+<p>Старый волшебник повернулся, его лицо сохраняло нейтральное\невозмутимое выражение.</p>
+<ul>
+<li><p>Почему ты так подумал, Гарри?</p></li>
+<li><p>Шляпа перед этим закричала “<em>Гриффиндор!</em>”, у меча была рубиновое навершие и золотые буквы на клинке, надпись, означающая на латыни “Никого лучше”. Так что вот, просто предположил.</p></li>
+<li><p>“Nihil supernum” - сказал старый волшебник. - Означает не совсем это.</p></li>
+<li><p>М-м, - кивнул Гарри. - И что вы с ним сделали?</p></li>
+</ul>
+<p>“By the way,” Harry said as he and the Headmaster emerged from Floo into the empty office of the Ravenclaw Head of House. “One last quick question I wanted to ask just you. That sword the Weasley twins pulled out of the Sorting Hat. That was the Sword of Gryffindor, wasn’t it?”</p>
+<p>The old wizard turned, face neutral. “What makes you think that, Harry?”</p>
+<p>“The Sorting Hat yelled <em>Gryffindor!</em> just before handing it out, the sword had a ruby pommel and gold letters on the blade, and the Latin script said <em>Nothing better</em>. Just a hunch.”</p>
+<p>“<em>Nihil supernum,</em>” said the old wizard. “That is not <em>quite</em> what it means.”</p>
+<p>Harry nodded. “Mmhm. What’d you do with it?”</p>
+<ul>
+<li><p>Я отыскал его там, куда он упал, и поместил в тайное место, - ответил старый волшебник. Он бросил на Гарри суровый взгляд. - Надеюсь, ты не хотел бы забрать его себе\не желаешь получить его\не собираешься просить отдать его тебе, юный когтевранец.</p></li>
+<li><p>Вовсе нет, просто хотел удостовериться, что вы не прячете его от законных владельцев. Полагаю, близнецы Уизли - Наследники Гриффиндора?</p></li>
+<li><p>Наследники Гриффиндора? - повторил Дамблдор, выглядя удивлённо. Потом старый волшебник улыбнулся, и его голубые глаза ярко блеснули. - О, Гарри, Салазар Слизерин мог устроить Тайную Комнату в Хогвартсе, но Годрик Гриффиндор был не склонен к подобному сумасбродству. Ты просто видел, что Годрик оставил свой меч на защиту Хогвартса, на случай, если достойный ученик столкнётся с врагом, которого не сможет победить сам.</p></li>
+<li><p>Ваши слова не означают “нет”. Не думайте, что я не заметил, что вы не сказали “нет”.</p></li>
+<li><p>Я не жил в те времена, Гарри, и не знаю всего, что Годрик Гриффиндор мог сделать и чего не мог…</p></li>
+</ul>
+<p>“I retrieved it from where it fell, and placed it in a secure place,” the old wizard said. He gave Harry a stern look. “I hope you are not greedy for it yourself, young Ravenclaw.”</p>
+<p>“Not at all, just want to make sure you’re not keeping it permanently from its rightful wielders. So the Weasley twins are the Heir of Gryffindor, then?”</p>
+<p>“The Heir of Gryffindor?” Dumbledore said, looking surprised. Then the old wizard smiled, blue eyes twinkling brightly. “Ah, Harry, Salazar Slytherin may have built a Chamber of Secrets into Hogwarts, but Godric Gryffindor was not much given to such extravagances. We have seen only that Godric left his Sword to the defense of Hogwarts, if a worthy student ever faced a foe they could not defeat alone.”</p>
+<p>“That’s not the same as saying no. Don’t think I didn’t notice that you didn’t actually say no.”</p>
+<p>“I did not live in those years, Harry, and I do not know all that Godric Gryffindor may or may not have done -”</p>
+<ul>
+<li>Можете ли вы присвоить субъективную вероятность в пятьдесят процентов и выше возможности, что существует нечто вроде Наследника Гриффиндора, и один или оба близнеца Уизли является им. Да или нет, уклонение от ответа тоже означает “да”. Вам не удастся отвлечь меня, и неважно, как сильно мне нужно в уборную.</li>
+</ul>
+<p>Старый волшебник вздохнул.</p>
+<ul>
+<li>Да, Фред и Джордж Уизли - Наследники Гриффиндора. Прошу тебя не говорить им об этом, не сейчас.</li>
+</ul>
+<p>Гарри кивнул и повернулся, чтобы идти.</p>
+<ul>
+<li><p>Я удивлён, - сказал он, - я немного читал об истории жизни historical life Годрика Гриффиндора. Близнецы Уизли… ну, они классные в каком-то смысле, но они не слишком смахивают на Годрика из исторических хроник.</p></li>
+<li><p>Только очень высокомерный и тщеславный человек, - спокойно ответил Дамблдор, поворачиваясь к камину, где уже ревело зелёное пламя, - будет надеяться, что его наследник будет похож на него самого, а не на того, каким бы он желал быть.</p></li>
+</ul>
+<p>Директор шагнул в зелёное пламя и ушёл.</p>
+<p>“Do you in fact assign greater than fifty percent subjective probability that there is something like a Heir of Gryffindor and one or both Weasley twins are it. Yes or no, evasion means yes. You’re not going to succeed in distracting me, no matter how much I have to go to the bathroom.”</p>
+<p>The old wizard sighed. “Yes, Fred and George Weasley are the Heir of Gryffindor. I beg you not to speak of it to them, not yet.”</p>
+<p>Harry nodded, and turned to go. “I’m surprised,” Harry said. “I read a little about Godric Gryffindor’s historical life. The Weasley twins are… well, they’re awesome in various ways, but they don’t seem much like the Godric in the history books.”</p>
+<p>“Only a man exceedingly proud and vain,” Dumbledore said quietly, as he turned back to the Floo roaring up again with green flames, “would believe that his heir should be like himself, rather than like who he wished that he could be.”</p>
+<p>The Headmaster stepped into green fire, and was gone.</p>
+<p>***</p>
+<p><em>Второе собрание (в маленьком укромном уголке рядом с гостинной Пуффендуя):</em></p>
+<p>Лицо Невилла Лонгботтома, разговарившего в отсутствие слушателей, с пустым местом, выражало страдание.</p>
+<ul>
+<li><p>Я серьёзно, - ответило ему пустое место. - Я надел мантию-невидимку с экстра-защитой от обнаружения только для того, чтобы пройти по коридору, потому что <em>я</em> не хочу быть убитым. Мои родители забрали бы меня из школы сию же минуту, если бы директор им позволил. Невилл, то, что ты делаешь ноги из Хогвартса - это здравый смысл, и не имеет <em>никакого</em> отношения к тому, что…</p></li>
+<li><p>Я предал тебя, генерал, - сказал Невилл, его голос звучал так глухо, как только может получиться у нормального одиннадцатилетнего мальчика. - И я даже сделал это не по-хаотичному. Я подчинился начальству и попытался заставить тебя тоже подчиниться ему. Что там ты говоришь Легиону Хаоса - солдат, который может всего лишь следовать приказам, бесполезен?</p></li>
+<li><p>Невилл, - решительно сказало пустое место. Невилл почувствовал на своих плечах тяжесть рук, спрятанных под тонкой тканью, и голос придвинулся. - Ты проявил не слепое подчинение начальству, а желание защитить меня. Это правда, что в нашем хаотичном мире солдаты, которые могут только выполнять правила и устав, ничего не стоят. Но солдаты, которые следуют правилам во имя того, чтобы защитить своих друзей…</p></li>
+<li><p>Стоят чуть больше, чем ничего? - горько спросил Невилл.</p></li>
+</ul>
+<p><em>The second meeting (in a small cubby off the Hufflepuff Common Room):</em></p>
+<p>Neville Longbottom’s face was drawn up in anguish, as he spoke with no one to hear, to the empty air.</p>
+<p>“Seriously,” the empty air said back to him. “I’m wearing an invisibility cloak with extra anti-detection charms just to walk through the hallways because <em>I</em> don’t want to be killed. My parents would have me out of Hogwarts in an instant if the Headmaster allowed it. Neville, your getting the heck out of Hogwarts is common sense, it has<em>nothing to do</em> with -”</p>
+<p>“I betrayed you, General,” Neville said, his voice around as hollow as any normal eleven-year-old boy could reasonably manage. “I didn’t even do it the Chaotic way. I conformed to authority and tried to make you conform to authority too. What’s that you always say, about how in the Chaos Legion, a soldier who can only obey orders is useless?”</p>
+<p>“Neville,” the empty air said firmly. The pressure of two hands, beneath thin cloth, came firmly to bear on Neville’s shoulders; and the voice moved closer to him. “You weren’t blindly obeying authority, you were trying to protect me. It’s true that in this chaotic world, soldiers who can only follow rules and regulations are worthless. However, soldiers who follow rules for the sake of protecting their friends are -”</p>
+<p>“Slightly better than worthless?” Neville said bitterly.</p>
+<ul>
+<li><p><em>Гораздо</em> больше, чем ничего. Невилл, ты допустил ошибку в суждении. Это стоило мне примерно шести секунд. Возможно, что Гермиона выжила бы, если бы её раны были чуть менее смертельны, но даже учитывая это, сомневаюсь, что за шесть секунд тролль успел откусить от неё лишний кусок. В контрфактическом\паралельном мире, где ты не преградил мне дорогу, Гермиона всё равно умерла. Я мог бы зачитать тебе первую дюжину пунктов из списка того, как Гермиона могла бы выжить, если бы я не был идиотом…</p></li>
+<li><p>Ты? <em>Ты</em> прямо побежал за ней. <em>Я</em> - один из тех, кто пытался остановить тебя. Если тут кто-то виноват, то это я, - горько сделал вывод Невилл.</p></li>
+</ul>
+<p>На это пустое место не сразу нашлось с ответом.</p>
+<p>“<em>Significantly</em> better than worthless. Neville, you made an error of judgment. It cost me around six seconds. Now it could be that Hermione’s injuries were just barely fatal, but even then, I don’t think six seconds was actually enough time for the troll to take an extra bite of Hermione. In the counterfactual world where you didn’t step in front of me, Hermione still died. Now, I could stand here listing out the first dozen ways that Hermione would be alive if I hadn’t been stupid -”</p>
+<p>“You? <em>You</em> ran right out after her. <em>I’m</em> the one who tried to stop you. It’s my fault if it’s anyone’s,” Neville said bitterly.</p>
+<p>The empty air went silent at this for a while.</p>
+<ul>
+<li><p>Вау, - наконец произнесло оно. - Вау. Должен сказать, это позволяет взглянуть на вещи с другой стороны. Я запомню это на следующий раз, когда вознамерюсь взять на себя вину за что-нибудь. Невилл, в литературе для этого есть термин “эгоцентрическая предвзятость”, он означает, что ты чувствуешь\видишь то, что происходит в твоей жизни, но не можешь почувствовать, что происходит в жизни других\не видишь картины в целом.There was way, way more going on than you running in front of me. Я думаю, ты неделями будешь вспоминать свой поступок ценой в шесть секунд, но больше никто не будет загружать этим голову. Другие люди тратят на обдумывание твоих ошибок гораздо меньше времени, чем ты сам, потому что ты - не центр их мира. Я <em>гарантирую</em> тебе, что никто, кроме тебя, даже <em>не подумал</em> о том, чтобы обвинить Невилла Лонгботтома в том, что произошло с Гермионой. Ни на секунду. Ты оказался, прошу прощения за формулировку, silly-dilly . А теперь заткнись и попрощайся.</p></li>
+<li><p>Я не хочу прощаться, - ответил Невилл. Его голос дрожал, но он смог сдержать слёзы. - Я хочу остаться здесь и сражаться вместе с тобой против… против чего бы то ни было.</p></li>
+</ul>
+<p>Пустое место придвинулось к нему и заключило его в объятья. Голос Гарри Поттера произнёс:</p>
+<ul>
+<li>Не повезло.</li>
+</ul>
+<p>“Wow,” the empty air finally said. “Wow. That puts a pretty different perspective on things, I have to say. I’m going to remember this the next time I feel an impulse to blame myself for something. Neville, the term in the literature for this is ‘egocentric bias’, it means that you experience everything about your own life but you don’t get to experience everything else that happens in the world. There was way, way more going on than you running in front of me. You’re going to spend weeks remembering that thing you did there for six seconds, I can tell, but nobody else is going to bother thinking about it. Other people spend a lot less time thinking about your past mistakes than you do, just because you’re not the center of their worlds. I <em>guarantee</em> to you that nobody except you has even <em>considered</em> blaming Neville Longbottom for what happened to Hermione. Not for a fraction of a second. You are being, if you will pardon the phrase, a silly-dilly. Now shut up and say goodbye.”</p>
+<p>“I don’t want to say goodbye,” Neville said. His voice was trembling, but he managed not to cry. “I want to stay here and fight with you against - against whatever’s happening.”</p>
+<p>The empty air moved closer to him, and embraced him in a hug, and Harry Potter’s voice whispered, “Tough luck.”</p>
+</body>
+</html>
