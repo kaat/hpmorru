@@ -9,6 +9,7 @@
 ./book-join-parts.bat
 ./book-export.bat
 ./book-parts-to-feed.bat
+./book-parts-check.bat # проверочка
 
 # Даем возможность почитать логи
-read-host
+# read-host

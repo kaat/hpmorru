@@ -61,4 +61,4 @@ $feed += "</book>"
 
 $feed | out-file $feed_file -encoding "UTF8"
 
-write-host "Press [enter] to exit..."; read-host
+# write-host "Press [enter] to exit..."; read-host
