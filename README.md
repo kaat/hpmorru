@@ -17,7 +17,7 @@ HPMOR RU command files
 - `DocConvert.exe`, `DocumentFormat.OpenXml.dll`
 - `book-parts-check.bat`
 
-## Workflow процесса сборки
+## Dataflow процесса сборки
 
 ![Процесс сборки](/images/process.png)
 
