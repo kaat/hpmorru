@@ -31,25 +31,25 @@ copy "./images/*.css" -destination "./export/"
 }
 
 "Конвертируем в EPUB..."
-&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.epub --epub-cover-image=images/cover.jpg "./export/hpmor_ru_pandoc.md"
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru.epub --epub-cover-image=images/cover.jpg "./export/hpmor_ru_pandoc.md"
 # "Конвертируем в PDF..."
-# &$pandoc --from=markdown --to=pdf --output=export/hpmor_ru_pandoc.pdf "./export/hpmor_ru_pandoc.md"
+# &$pandoc --from=markdown --to=pdf --output=export/hpmor_ru.pdf "./export/hpmor_ru_pandoc.md"
 
 "Конвертируем в HTML..."
-&$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output=export/hpmor_ru_pandoc.html "./export/hpmor_ru_pandoc.md"
-$content = [System.IO.File]::ReadAllText("./export/hpmor_ru_pandoc.html")
+&$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output=export/hpmor_ru.html "./export/hpmor_ru_pandoc.md"
+$content = [System.IO.File]::ReadAllText("./export/hpmor_ru.html")
 $content = $content.Replace("./images/", "../images/")
-$content | Out-File "./export/hpmor_ru_pandoc.html"
+$content | Out-File "./export/hpmor_ru.html"
 
 "Конвертируем в FB2..."
-&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.fb2 "./export/hpmor_ru_pandoc.md"
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru.fb2 "./export/hpmor_ru_pandoc.md"
 "  * Архивируем FB2..."
 if(test-path($7z)) {
-   &$7z a -tzip -mx9 "./export/hpmor_ru_pandoc.fb2.zip" "./export/hpmor_ru_pandoc.fb2" 
+   &$7z a -tzip -mx9 "./export/hpmor_ru.fb2.zip" "./export/hpmor_ru.fb2" 
 } else {
-   zip -9 -m -D -j "./export/hpmor_ru_pandoc.fb2.zip" "./export/hpmor_ru_pandoc.fb2"
+   zip -9 -m -D -j "./export/hpmor_ru.fb2.zip" "./export/hpmor_ru.fb2"
 }
 "Конвертируем в DOCX..."
-&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.docx "./export/hpmor_ru_pandoc.md"
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru.docx "./export/hpmor_ru_pandoc.md"
 "Конвертируем в MOBI..."
-&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.mobi "./export/hpmor_ru_pandoc.md"
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru.mobi "./export/hpmor_ru_pandoc.md"
