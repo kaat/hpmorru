@@ -16,3 +16,9 @@ $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr_password)
 
 $login
 $password
+
+&pscp -pw$secure_password "./export/hpmor_ru.fb2.zip" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.fb2.zip
+&pscp -pw$secure_password "./export/hpmor_ru.mobi" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.mobi
+&pscp -pw$secure_password "./export/hpmor_ru.epub" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.epub
+&pscp -pw$secure_password "./export/hpmor_ru.html" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.html
+&pscp -pw$secure_password "./export/hpmor-feed.xml" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor-feed.xml
