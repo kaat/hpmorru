@@ -53,7 +53,7 @@ HPMOR RU command files
 	- скрипты загрузки данных по SSH
 
 ## Task Archive
-	- формировать файл hpmor_ru_pd.md из hpmor_ru.md добавлением к нему 0 заглавие.md, и этот файл использовать для pandoc *@done(2013-11-27)*
+- формировать файл hpmor_ru_pd.md из hpmor_ru.md добавлением к нему 0 заглавие.md, и этот файл использовать для pandoc *@done(2013-11-27)*
 
  [l_pandoc]: http://johnmacfarlane.net/pandoc/
  [l_calibre]: http://calibre-ebook.com/
