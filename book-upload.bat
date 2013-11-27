@@ -12,10 +12,10 @@ $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr_password)
 [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($ptr_password)
 
 &pscp -pw $password "./export/hpmor-feed.xml" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor-feed.xml
+&pscp -pw $password "./export/hpmor_ru_calibre.md" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.md
 
 # выгружаем результат работы pandoc
 &pscp -pw $password "./export/hpmor_ru_pandoc.html" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.html
-&pscp -pw $password "./export/hpmor_ru_calibre.md" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.md
 
 # выгружаем результат работы calibre (!todo)
 # &pscp -pw $password "./export/hpmor_ru_calibre.fb2.zip" $login@hpmor.ru:/home/httpd/vhosts/hpmor.ru/httpdocs/files/hpmor_ru.fb2.zip
