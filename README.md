@@ -1,6 +1,7 @@
-#﻿[HPMORRU](https://github.com/kaat/hpmorru/)
+#﻿ [HPMORRU](https://github.com/kaat/hpmorru/)
 
 HPMOR RU command files
+
 
 ## Правила пользования лифтом
 
@@ -17,20 +18,24 @@ HPMOR RU command files
 - Если вы знакомы с `git` - присылайте пул-ревестыы на отдельные главы из `./parts` - мы их вмержим в GoogleDocs.
 - Файлы в папке `./export` выложены с демонстрационными целями, как результат того, что на выходе дают имеющиеся тут командные файлы. **Не надо** присылать пул ревесты на файлы, выложенные в `./export`
 
+
 ## Скрипты
 
 Написаны на **bat-posh** и исполняются в Windows XP/Vista/7 - из коробки.
 
 - `images` - статические ресурсы
-- `parts_include` - статические главы (вступление, заключение и т.д.)
-- `export` - эл. книги в различных форматах, полученные с помощью [pandoc][l_pandoc]
+- `parts_include` - общие статические главы (вступление, заключение и т.д.)
+- `parts_include_pandoc` - статические главы - специфичные для [pandoc][l_pandoc]
+- `parts_include_calibre` - статические главы - специфичные для [calibre][l_calibre]
+- `export` - эл. книги в различных форматах, полученные с помощью скриптов
 - `00-masterpiece-run.bat`
 - `book-docx-to-parts.bat` - превращает главы из `./docx` в главы `./parts`
-- `book-join-parts.bat` - соединяет главы из `./parts` в книгу `./export/hpmor_ru.md`
-- `book-export.bat` - экспортирует книгу `./hpmor_ru.md` из формата *markdown* в epub/fb2/html/docx средствами [pandoc][l_pandoc]
+- `book-join-parts.bat` - соединяет главы в книгу `md`
+- `book-export-pandoc.bat` - экспортирует книгу `./hpmor_ru_pandoc.md` из формата *markdown* в epub/fb2/html/docx средствами [pandoc][l_pandoc]
 - `book-parts-to-feed.bat`
 - `DocConvert.exe`, `DocumentFormat.OpenXml.dll`
 - `book-parts-check.bat`
+
 
 ## Dataflow процесса сборки
 
@@ -44,8 +49,8 @@ HPMOR RU command files
 	- корректная конвертация таблиц *@option*
 - **Общий стиль**
 	- эпиграфы
-	- формировать файл hpmor_ru_pd.md из hpmor_ru.md добавлением к нему 0 заглавие.md, и этот файл использовать для pandoc
 - **Сайт [hpmor.ru](http://hpmor.ru/)**
 	- скрипты загрузки данных по SSL
 
  [l_pandoc]: http://johnmacfarlane.net/pandoc/
+ [l_calibre]: http://calibre-ebook.com/

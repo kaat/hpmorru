@@ -1,0 +1,55 @@
+﻿<# batch file posh loader
+@cls
+@powershell.exe -command "iex ([System.IO.File]::ReadAllText('%0'))"
+:: @pause
+@goto :EOF
+#>
+
+if(test-path("C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe")) {
+   $pandoc = "C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe"
+} else {
+   $pandoc = "pandoc.exe"
+}
+
+$7z = "C:/Program Files (x86)/7-Zip/7z.exe"
+$css = "./images/markdown.css"
+
+if(test-path("./export/html/")) { $null = remove-item "./export/html/" -force -recurse }
+$null = new-item "./export/html/" -type directory -force
+
+copy "./images/*.css" -destination "./export/html/"
+copy "./images/*.css" -destination "./export/"
+
+"Конвертируем в HTML по главам..."
+@(dir "./parts" -filter "*.md") +
+@(dir "./parts_include" -filter "*.md") +
+@(dir "./parts_include_pandoc" -filter "*.md") |
+% {
+   "  * $($_.Name)"
+   $output = "./export/html/" + $_.Name + ".html"
+   &$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output=$output $_.FullName
+}
+
+"Конвертируем в EPUB..."
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.epub --epub-cover-image=images/cover.jpg "./export/hpmor_ru_pandoc.md"
+# "Конвертируем в PDF..."
+# &$pandoc --from=markdown --to=pdf --output=export/hpmor_ru_pandoc.pdf "./export/hpmor_ru_pandoc.md"
+
+"Конвертируем в HTML..."
+&$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output=export/hpmor_ru_pandoc.html "./export/hpmor_ru_pandoc.md"
+$content = [System.IO.File]::ReadAllText("./export/hpmor_ru_pandoc.html")
+$content = $content.Replace("./images/", "../images/")
+$content | Out-File "./export/hpmor_ru_pandoc.html"
+
+"Конвертируем в FB2..."
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.fb2 "./export/hpmor_ru_pandoc.md"
+"  * Архивируем FB2..."
+if(test-path($7z)) {
+   &$7z a -tzip -mx9 "./export/hpmor_ru_pandoc.fb2.zip" "./export/hpmor_ru_pandoc.fb2" 
+} else {
+   zip -9 -m -D -j "./export/hpmor_ru_pandoc.fb2.zip" "./export/hpmor_ru_pandoc.fb2"
+}
+"Конвертируем в DOCX..."
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.docx "./export/hpmor_ru_pandoc.md"
+"Конвертируем в MOBI..."
+&$pandoc --from=markdown --smart -V lang:russian --output=export/hpmor_ru_pandoc.mobi "./export/hpmor_ru_pandoc.md"
