@@ -43,7 +43,3 @@ if($yn -eq 'y') {
 } else {
 	&"./DocConvert.exe" --path_in "./docx" --path_out "./parts" --verbose --resources "./parts/resources" --resourcesRel "./parts/resources"
 }
-
-"`n 3. Копируем доп. материалы в формате markdown..."
-dir "./parts_include" -filter "*.md" |
-% { copy-item $_.FullName -destination "./parts" -force }
