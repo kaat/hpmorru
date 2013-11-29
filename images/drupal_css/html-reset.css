@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file
  * HTML Element Styling
  *
@@ -115,10 +115,10 @@ fieldset {
 
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
-   */
+  */
 
-  font-family: Calibri, Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-size: 1.0em;
+  font-family: Habibi, Georgia, Tahoma, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 1.3em;
 }
 
 pre,
@@ -176,8 +176,8 @@ h6 {
 
 /* Other block-level elements */
 p {
-margin: 0.6em;
-/*text-indent: 2em;*/
+  margin: 0.75em;
+  text-indent: 0em;
 }
 
 blockquote {
