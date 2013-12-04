@@ -1,15 +1,35 @@
-﻿skinparam componentStyle uml2
+﻿@startuml
+
+skinparam componentStyle uml2
 
 cloud "GoogleDocs" {
-  [GDOC docs]
+	[GDOC storage]
 }
 
-[GDOC docs] --> [DOCX docs] : Download
-[DOCX docs] --> [MD parts] : DocConvert
-[MD parts] --> [Drupal feed] : book-parts-to-feed
-[MD parts] --> [MD eBook] : book-join
-[MD parts] --> [HTML parts] : pandoc
-[MD eBook] --> [HTML eBook] : pandoc
-[MD eBook] --> [FB2 eBook] : calibre
-[MD eBook] --> [EPUB eBook] : calibre
-[MD eBook] --> [MOBI eBook] : calibre
+cloud "HPMOR.RU" {
+	[CMS]
+}
+
+folder "eBooks" {
+	[EPUB eBook]
+	[FB2 eBook]
+	[HTML eBook]
+	[MOBI eBook]
+}
+
+[GDOC storage] --> [DOCX collection] : download
+[DOCX collection] --> [Markdown collection] : book-docx-to-parts
+[Markdown collection] --> [CMS feed] : book-parts-to-feed
+[Markdown collection] -right-> [Markdown eBook] : book-join
+[Markdown eBook] --> [HTML eBook] : pandoc
+[Markdown eBook] --> [FB2 eBook] : calibre
+[Markdown eBook] --> [EPUB eBook] : calibre
+[Markdown eBook] --> [MOBI eBook] : calibre
+
+[CMS feed] --> [CMS] : book-upload
+[HTML eBook] --> [CMS] : book-upload
+[FB2 eBook] --> [CMS] : book-upload
+[EPUB eBook] --> [CMS] : book-upload
+[MOBI eBook] --> [CMS] : book-upload
+
+@enduml
