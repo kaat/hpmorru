@@ -6,6 +6,7 @@
 #>
 
 ./book-docx-to-parts.bat
+./book-repair-asterix.bat
 ./book-join-parts.bat
 ./book-export-pandoc.bat
 # ./book-export-calibre.bat
