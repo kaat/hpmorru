@@ -5,8 +5,8 @@
 @goto :EOF
 #>
 
-if(test-path("C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe")) {
-   $pandoc = "C:/Users/yuliyl.EA/AppData/Local/Pandoc/pandoc.exe"
+if(test-path("C:/Users/yuliyl/AppData/Local/Pandoc/pandoc.exe")) {
+   $pandoc = "C:/Users/yuliyl/AppData/Local/Pandoc/pandoc.exe"
 } else {
    $pandoc = "pandoc.exe"
 }
@@ -31,8 +31,8 @@ copy "./images/*.css" -destination "./export/"
 #    &$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output=$output $_.FullName
 # }
 
-"Конвертируем в EPUB..."
-&$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.epub" --epub-cover-image=images/cover.jpg "./export/$name.md"
+# "Конвертируем в EPUB..."
+# &$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.epub" --epub-cover-image=# images/cover.jpg "./export/$name.md"
 # "Конвертируем в PDF..."
 # &$pandoc --from=markdown --to=pdf --output="./export/$name.pdf" "./export/$name.md"
 
@@ -42,15 +42,16 @@ $content = [System.IO.File]::ReadAllText("./export/$name.html")
 $content = $content.Replace("./images/", "../images/")
 $content | Out-File "./export/$name.html"
 
-"Конвертируем в FB2..."
-&$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.fb2" "./export/$name.md"
-"  * Архивируем FB2..."
-if(test-path($7z)) {
-   &$7z a -tzip -mx9 "./export/$name.fb2.zip" "./export/$name.fb2" 
-} else {
-   zip -9 -m -D -j "./export/$name.fb2.zip" "./export/$name.fb2"
-}
+#"Конвертируем в FB2..."
+#&$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.fb2" "./export/$name.md"
+#"  * Архивируем FB2..."
+#if(test-path($7z)) {
+#   &$7z a -tzip -mx9 "./export/$name.fb2.zip" "./export/$name.fb2" 
+#} else {
+#   zip -9 -m -D -j "./export/$name.fb2.zip" "./export/$name.fb2"
+#}
+
 "Конвертируем в DOCX..."
 &$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.docx" "./export/$name.md"
-"Конвертируем в MOBI..."
-&$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.mobi" "./export/$name.md"
+# "Конвертируем в MOBI..."
+# &$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.mobi" "./export/$name.md"

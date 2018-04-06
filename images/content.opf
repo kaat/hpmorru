@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:publisher>hpmor.ru</dc:publisher>
+    <dc:description>Это электронная версия книги, размещённая на сайте http://hpmor.ru/</dc:description>
+    <dc:language>RU</dc:language>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">Элиезер Юдковский</dc:creator>
+    <dc:title>Гарри Поттер и методы рационального мышления</dc:title>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">4da9dd22-6804-4be5-ae13-e24e3ebd6ff4</dc:identifier>
+  </metadata>
+
+</package>
