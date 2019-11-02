@@ -1,0 +1,10 @@
+# Export files
+export/html/*
+export/index-1.html
+export/index-2.html
+export/index-3.html
+export/hpmor-feed.xml
+parts/*
+
+#OS
+Thumbs.db

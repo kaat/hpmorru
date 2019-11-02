@@ -37,7 +37,7 @@ copy "./images/*.css" -destination "./export/"
 # &$pandoc --from=markdown --to=pdf --output="./export/$name.pdf" "./export/$name.md"
 
 "Конвертируем в HTML..."
-&$pandoc --from=markdown --smart -V lang:russian --standalone --self-contained --css=$css --output="./export/$name.html" "./export/$name.md"
+&$pandoc --from=markdown -V lang:ru-ru --metadata pagetitle="Гарри Поттер и методы рационального мышления" --standalone --self-contained --css=$css --output="./export/$name.html" "./export/$name.md"
 $content = [System.IO.File]::ReadAllText("./export/$name.html")
 $content = $content.Replace("./images/", "../images/")
 $content | Out-File "./export/$name.html"
@@ -52,6 +52,6 @@ $content | Out-File "./export/$name.html"
 #}
 
 "Конвертируем в DOCX..."
-&$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.docx" "./export/$name.md"
+&$pandoc --from=markdown -V lang:ru-ru --output="./export/$name.docx" "./export/$name.md"
 # "Конвертируем в MOBI..."
 # &$pandoc --from=markdown --smart -V lang:russian --output="./export/$name.mobi" "./export/$name.md"
