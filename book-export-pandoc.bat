@@ -13,7 +13,7 @@ if(test-path("C:/Users/yuliyl/AppData/Local/Pandoc/pandoc.exe")) {
 
 $7z = "C:/Program Files (x86)/7-Zip/7z.exe"
 $css = "./images/markdown.css"
-$name = "hpmor_ru_pandoc"
+$name = "hpmor_ru"
 
 if(test-path("./export/html/")) { $null = remove-item "./export/html/" -force -recurse }
 $null = new-item "./export/html/" -type directory -force
